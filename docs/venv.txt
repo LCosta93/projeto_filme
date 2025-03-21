@@ -1,0 +1,24 @@
+- Instalar
+pip install ven
+
+Criar ambiente
+python -m venv venv
+
+- Ativar  (Linux ou macOS)
+source venv/bin/activate
+
+- Ativar  (Windows)
+venv/Scripts/Activate
+
+- Desativar
+deactivate
+
+
+- Instalar Pacotes
+pip freeze
+
+- Gerar o arquivo requirements.txt
+pip freeze > requirements.txt
+
+- Instalar as bibliotecas do requirements
+pip install -r requirements.txt

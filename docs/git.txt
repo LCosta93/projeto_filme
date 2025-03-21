@@ -1,0 +1,102 @@
+1. Git clone
+Git clone é uma comando para baixar o código-fonte existente de um repositório remoto (como, por exemplo, o Github).
+
+git clone <https://link-com-o-nome-do-repositório>
+
+
+
+2. Git branch
+Usando as branches, vários desenvolvedores conseguem trabalhar em paralelo no mesmo projeto simultaneamente. Podemos usar o comando git branch para criar, listar e excluir as branches.
+
+Como criar uma branch:
+git branch <nome-da-branch>
+
+Para fazer o push (algo como enviar) da nova branch para o repositório remoto:
+git push -u <local-remoto> <nome-da-branch>
+
+Como ver as branches:
+git branch ou git branch --list
+
+Como excluir uma branch:
+git branch -d <nome-da-branch>
+
+
+
+3. Git checkout
+Usamos git checkout, na maioria dos casos, para trocar de uma branch para outra. Também podemos usar o comando para fazer o checkout de arquivos e commits.
+
+git checkout <nome-da-branch>
+
+git checkout -b <nome-da-branch>
+
+
+
+4. Git status
+O comando git status nos dá todas as informações necessárias sobre a branch atual.
+
+git status
+
+TRISTAN DA CUNHA & GOUGH ISLAND
+NORTH MACEDONIA (REPUBLIC)
+
+5. Git add
+Precisamos usar o comando git add para incluir as alterações de um ou vários arquivos em nosso próximo commit.
+
+Para adicionar um único arquivo:
+git add <arquivo>
+
+Para adicionar tudo ao mesmo tempo:
+git add -A
+
+
+
+6. Git commit
+Git commit é como definir um ponto de verificação no processo de desenvolvimento. Você pode voltar a esse ponto mais tarde, se necessário.
+
+git commit -m "mensagem do commit"
+
+
+
+7. Git push
+pós fazer o commit de suas alterações, a próxima coisa a fazer é enviar suas alterações ao servidor remoto.
+
+Git push faz o upload dos seus commits no repositório remoto.
+git push <repositório-remoto> <nome-da-branch>
+
+se a sua branch foi recém-criada, também é preciso fazer o upload da branch com o seguinte comando:
+git push --set-upstream <repositório-remoto> <nome-da-branch>
+git push -u origin <nome-da-branch>
+
+
+
+8. Git pull
+O comando git pull é usado para obter as atualizações de um repositório remoto. Esse comando é uma combinação de git fetch e git merge, o que significa que, quando usamos git pull, ele recebe as atualizações do repositório remoto (git fetch) e aplica imediatamente as alterações mais recentes em seu espaço de trabalho local (git merge).
+
+git pull <repositório-remoto>
+
+
+
+9. Git revert
+Às vezes, precisamos desfazer as alterações que fizemos. Existem várias maneiras de se desfazer as alterações em nosso espaço de trabalho local ou remotamente 
+
+Para ver nosso histórico de commits, primeiro, precisamos usar 
+git log --oneline
+
+Precisamos apenas especificar o código hash ao lado do commit que desejamos desfazer:
+git revert 3321844
+
+
+
+10. Git merge
+Quando você concluir o desenvolvimento em sua branch e quando tudo funcionar bem, a etapa final é fazer o merge (mesclar ou unir, em português) da branch com a branch pai (dev ou master/main, em geral). Isso é feito com o comando git merge.
+
+Primeiro, troque para a branch dev:
+
+git checkout dev
+Antes do merge, atualize sua branch dev local:
+
+git fetch
+Por fim, faça o merge da sua branch do recurso em dev:
+
+git merge <nome-da-branch-com-o-recurso>
+

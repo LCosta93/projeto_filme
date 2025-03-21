@@ -1,0 +1,15 @@
+# Não inclua arquivos de dados
+dados/filmes.db
+dados/filme_duckdb.db
+dados/filmes.zip
+dados/*
+venv/*
+
+# Não inclua arquivos de logs
+*.log
+
+#Não inclua arquivos de configuração
+config.json
+
+
+create_table_duckdb/create_table2_duck.py
